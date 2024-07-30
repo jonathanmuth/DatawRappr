@@ -212,7 +212,7 @@ dw_edit_chart <- function(chart_id, api_key = "environment", title = NULL, intro
     call_body <- append(call_body, additional_arguments)
   }
 
-  if (lenght(metadata_override) > 0) {
+  if (length(metadata_override) > 0) {
     call_body <- metadata_override
   }
 
