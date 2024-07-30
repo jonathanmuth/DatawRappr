@@ -1,6 +1,6 @@
 Package: DatawRappr
 Type: Package
-Title: Provides Access to Datawrapper's API
+Title: (Fixed) Provides Access to Datawrapper's API 
 Version: 1.2
 Authors@R: c(
       person("Benedict", "Witzenberger", email = "b.witzenberger@googlemail.com", role = c("aut", "cre")),
