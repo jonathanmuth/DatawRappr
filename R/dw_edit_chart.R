@@ -137,7 +137,7 @@
 #' @export
 dw_edit_chart <- function(chart_id, api_key = "environment", title = NULL, intro = NULL, annotate = NULL, byline = NULL,
                           type = NULL, source_name = NULL, source_url = NULL, folderId = NULL, axes = list(), data = list(), visualize = list(),
-                          describe = list(), publish = list(), ...) {
+                          describe = list(), publish = list(), metadata_override = NULL ...) {
 
   if (api_key == "environment") {
     api_key <- dw_get_api_key()
@@ -210,6 +210,10 @@ dw_edit_chart <- function(chart_id, api_key = "environment", title = NULL, intro
 
   if (length(additional_arguments) > 0) {
     call_body <- append(call_body, additional_arguments)
+  }
+
+  if (lenght(metadata_override) > 0) {
+    call_body <- metadata_override
   }
 
   # send call to API
